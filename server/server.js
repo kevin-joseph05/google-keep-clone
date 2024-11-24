@@ -3,12 +3,13 @@ import cors from "cors"
 import pg from "pg"
 
 
-const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: "keep",
-    password: "MangoMan12Bam",
-    port: 5432,
+
+  const db = new pg.Client({
+    user: process.env.PG_USER,
+    host: process.env.PG_HOST,
+    database: PG_DATABASE,
+    password: PG_PASSWORD,
+    port: PG_PORT,
   });
   db.connect();
 
